@@ -40,9 +40,9 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 ## Screenshots
-### `Book by Catagory`
+### `Books by Catagory`
 ![image](https://user-images.githubusercontent.com/77279763/146971015-061ca015-3ef2-46ff-bb70-a1e4b5960c10.png) 
-### `book availble in story group`
+### `Book availble in story group`
 ![image](https://user-images.githubusercontent.com/77279763/146971211-b47cbf96-024a-4ef9-9d52-9c2e20dced6e.png)
 
 ### `All Books`
