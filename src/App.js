@@ -1,24 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/style/Navbar';
+import Bookitems from './components/Books/Bookitems';
+import BooksCatagary from './components/Books/BooksCatagary';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
+import DisplayBook from './components/displaybook/DisplayBook';
 
 function App() {
+  let routes = (<Switch>
+    <Route path="/catagory">
+      <BooksCatagary />
+    </Route>
+    <Route exact path="/books/:type">
+      <Bookitems />
+    </Route>
+    <Route exact path="/books">
+      <Bookitems />
+    </Route>
+    <Route exact path="/books/:type/:bid">
+      <DisplayBook />
+    </Route>
+    <Redirect path="/catagory">
+      <BooksCatagary />
+    </Redirect>
+  </Switch>)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Hello world
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Navbar />
+        {routes}
+      </Router>
+    </>
   );
 }
 
